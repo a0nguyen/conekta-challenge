@@ -1,0 +1,14 @@
+<div class="date-form">
+  <form class="col s12" #changeDate="ngForm" (ngSubmit)="submit()">
+    <div class="row center ">
+      <div class="input-field col m6 s12">
+        <i class="material-icons prefix">date_range</i>
+        <input id="icon_prefix" type="number" class="validate" name="dateToFilterBy" [(ngModel)]="dateToFilterBy" >
+        <label for="icon_prefix">Timestamp</label>
+      </div>
+      <div class="col m5 s12">
+        <button class="btn-large waves-effect waves-light">Filter by date</button>
+      </div>
+    </div>
+  </form>
+</div>
