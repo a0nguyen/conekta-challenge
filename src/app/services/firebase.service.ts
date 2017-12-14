@@ -1,14 +1,13 @@
 import { Injectable } from "@angular/core";
 import {
   AngularFireDatabase,
-  AngularFireObject,
   AngularFireList
 } from "angularfire2/database";
 import { database } from "firebase/app";
 
 @Injectable()
 export class FirebaseService {
-  orders;
+  orders: any[] = [];
   trades: any[] = [];
 
   constructor(public firebaseDb: AngularFireDatabase) {

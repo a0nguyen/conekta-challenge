@@ -1,36 +1,29 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { element } from 'protractor';
+import { Component, OnInit, Input } from "@angular/core";
+import { element } from "protractor";
 
 @Component({
-  selector: 'app-table',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css']
+  selector: "app-table",
+  templateUrl: "./table.component.html",
+  styleUrls: ["./table.component.css"]
 })
 export class TableComponent implements OnInit {
+  @Input() elementsToDisplay: any = []
 
-  @Input() set elementsToDisplay(elements: any){
-    if(elements){
-      this._elementsToDisplay = elements      
+  @Input()
+  set timestamp(timestamp: number) {
+    if (timestamp) {
+      this._timestamp = timestamp;
+    } else {
+      this._timestamp = 0
     }
   }
-  get elementsToDisplay(): any{
-    return this._elementsToDisplay
+  get timestamp(): number {
+    return this._timestamp;
   }
 
-  @Input() timestamp: number = 0 // for 10minutes -> date.now() - 60 * 60 * 10 * 1000
+  _timestamp: number = 0;
 
-  fitWithDate(element){
-    if(element.payload.val().d > this.timestamp){
-      return true
-    }
-  }
+  constructor() {}
 
-  _elementsToDisplay: any[] = []
-  
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
