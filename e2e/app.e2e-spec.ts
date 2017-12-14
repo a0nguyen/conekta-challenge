@@ -33,7 +33,7 @@ describe("As a user, when I visit the order page", () => {
     browser.sleep(2000);
     expect(element(by.css("app-table")).isPresent()).toBeTruthy();
     expect(element(by.css("app-table .jas-id72022")).isPresent()).toBeTruthy();
-    expect(element(by.css("app-table .jas-id720344")).isPresent()).toBeTruthy();
+    expect(element(by.css("app-table .jas-id70344")).isPresent()).toBeTruthy();
   });
   describe("when I set the date", () => {
     it("should display the orders matching with the date", () => {
@@ -42,7 +42,7 @@ describe("As a user, when I visit the order page", () => {
       element(by.css(".date-form input")).sendKeys("1513212209200");
       element(by.css(".date-form button")).click();
       expect(
-        element(by.css("app-table .jas-id720344")).isPresent()
+        element(by.css("app-table .jas-id70344")).isPresent()
       ).toBeFalsy();
       expect(
         element(by.css("app-table .jas-id72022")).isPresent()
@@ -58,7 +58,7 @@ describe("As a user, when I visit the order page", () => {
       browser.sleep(2000);      
       element(by.css(".date-form input")).clear();
       element(by.css(".date-form button")).click();
-      expect(element(by.css("app-table .jas-id720344")).isPresent()).toBeTruthy();
+      expect(element(by.css("app-table .jas-id70344")).isPresent()).toBeTruthy();
       expect(element(by.css("app-table .jas-id72022")).isPresent()).toBeTruthy();
     });
   });
