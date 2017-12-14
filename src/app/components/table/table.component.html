@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row center">
+    <table class="striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Rate</th>
+          <th>Amount</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let element of elementsToDisplay | async; let i = index;">
+          <ng-container *ngIf="fitWithDate(element)">
+            <td>{{i}}</td>
+            <td [class]="'jas-id' + element.payload.val().i">{{element.payload.val().i}}</td>
+            <td [class]="'jas-rate' + element.payload.val().i">{{element.payload.val().r}}</td>
+            <td [class]="'jas-amount' + element.payload.val().i">{{element.payload.val().a}}</td>
+            <td [class]="'jas-value' + element.payload.val().i">{{element.payload.val().v}}</td>
+          </ng-container>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
