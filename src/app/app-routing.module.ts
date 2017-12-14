@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, Router, ActivatedRoute, Params} from '@angular/router';
 import { HomepageComponent } from './pages/homepage/homepage.component';
-import { OrderPageComponent } from './pages/order-page/order-page.component';
-import { BookPageComponent } from './pages/book-page/book-page.component';
+import { OrdersPageComponent } from './pages/orders-page/orders-page.component';
+import { TradesPageComponent } from './pages/trades-page/trades-page.component';
 import { HeaderComponent } from './components/header/header.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomepageComponent },
-    { path: 'orders', component: OrderPageComponent },
-    { path: 'trades', component: BookPageComponent },
+    { path: 'orders', component: OrdersPageComponent },
+    { path: 'trades', component: TradesPageComponent },
 ];
 
 @NgModule({

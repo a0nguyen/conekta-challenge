@@ -1,0 +1,4 @@
+<div class="container">
+    <app-date-form (dateChanged)="onDateChange($event)"></app-date-form>
+    <app-table *ngIf="db.trades" [elementsToDisplay]="db.trades" [timestamp]="dateToFilterBy"></app-table>
+</div>

@@ -11,10 +11,11 @@ import { AngularFireDatabaseModule } from "angularfire2/database";
 
 import { AppComponent } from "./app.component";
 import { HomepageComponent } from "./pages/homepage/homepage.component";
-import { OrderPageComponent } from "./pages/order-page/order-page.component";
-import { BookPageComponent } from "./pages/book-page/book-page.component";
+import { OrdersPageComponent } from "./pages/orders-page/orders-page.component";
+import { TradesPageComponent } from "./pages/trades-page/trades-page.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { TableComponent } from "./components/table/table.component";
+import { DateFormComponent } from './components/date-form/date-form.component';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBrXrzap-bBiv9mi-EXqfZIW6vBb1eUtB0",
@@ -29,10 +30,11 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     HomepageComponent,
-    OrderPageComponent,
-    BookPageComponent,
+    OrdersPageComponent,
+    TradesPageComponent,
     HeaderComponent,
-    TableComponent
+    TableComponent,
+    DateFormComponent
   ],
   imports: [
     BrowserModule,
@@ -40,8 +42,6 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     FormsModule,
-    AppRoutingModule,
-    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
