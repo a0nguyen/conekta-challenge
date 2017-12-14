@@ -1,6 +1,11 @@
 # ConektaChallengeFront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.2.
+The live version of this project can be found on https://conketa-c.firebaseapp.com/
+
+## Install the dependencies
+
+Run `npm i`
 
 ## Development server
 
